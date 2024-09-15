@@ -13,7 +13,7 @@ import {
 } from "react-native";
 
 import Checkbox from "expo-checkbox";
-import { TodosCounter } from "../components/TodosCounter";
+import { TodosCounter } from "../../components/TodosCounter";
 import { styles } from "./styles";
 import { useState } from "react";
 
@@ -76,7 +76,7 @@ export default function Home() {
       <StatusBar barStyle="light-content" translucent />
       <View style={styles.logoContainer}>
         <Image
-          source={require("../../assets/images/logo.png")}
+          source={require("../../../assets/images/logo.png")}
           style={styles.logo}
           resizeMode="contain"
         />
@@ -92,7 +92,7 @@ export default function Home() {
           />
           <TouchableOpacity style={styles.addButton} onPress={handleAddTodo}>
             <Image
-              source={require("../../assets/images/icon_add_circle.png")}
+              source={require("../../../assets/images/icon_add_circle.png")}
               style={styles.iconAddCircle}
             />
           </TouchableOpacity>
@@ -154,7 +154,7 @@ export default function Home() {
                   onPress={() => handleDeleteTodo(item.id)}
                 >
                   <Image
-                    source={require("../../assets/images/icon_trash.png")}
+                    source={require("../../../assets/images/icon_trash.png")}
                     style={styles.iconDelete}
                   />
                 </TouchableOpacity>
@@ -163,7 +163,7 @@ export default function Home() {
             ListEmptyComponent={() => (
               <View style={styles.emptyContainer}>
                 <Image
-                  source={require("../../assets/images/icon_empty_todos.png")}
+                  source={require("../../../assets/images/icon_empty_todos.png")}
                   style={styles.emptyIcon}
                 />
                 <Text style={styles.emptyTitleText}>
